@@ -24,5 +24,10 @@ jobs:
       - name: 🛠️ Build Angular App
         run: npm run build -- --configuration production --base-href /angular-git-hub-pages/
 
+      - name: 👤 Set Git Identity
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+
       - name: 🚀 Deploy to GitHub Pages
         run: npx angular-cli-ghpages --dir=dist/angular-git-hub-pages/browser --no-silent --branch=gh-pages --message="Auto-deployed from GitHub Actions 🚀"
