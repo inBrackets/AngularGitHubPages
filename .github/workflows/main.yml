@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: 🛠️ Build Angular App
-        run: npm run build -- --configuration production --base-href /angular-git-hub-pages/
+        run: npm run build -- --configuration production --base-href https://inbrackets.github.io/AngularGitHubPages/
 
       - name: 👤 Set Git Identity
         run: |
